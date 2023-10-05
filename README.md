@@ -2,4 +2,4 @@
 
 work in progress... <br>
 some programming practice for cs1203 taught by prof. debayan gupta @ ashoka university <br> <hr>
-<i> Hi TAs, incase you see this <i>
+<i> Hi TAs, you're the best uwu<i>

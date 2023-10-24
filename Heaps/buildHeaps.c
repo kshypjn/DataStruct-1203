@@ -1,3 +1,6 @@
+#include <stdio.h>
+#include <stdlib.h>
+
 //Build min heap
 void buildMinHeap(int* arr, int len) {
     for (int i = 1; i < len; i++) {

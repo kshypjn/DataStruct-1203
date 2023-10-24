@@ -33,3 +33,41 @@ int getBalanceFactor(struct node* n){
     return getH(n->left) - getH(n->right);
 }
 
+struct node* rightRotate(struct node* y){
+    struct node* x = y->left;
+    struct node* terminal2 = x->right;
+    x->right = y;
+    y->left = terminal2;
+    y->height = max(getH(y->right),getH(y->left))+1;
+    x->height = max(getH(x->right),getH(x->left))+1;
+    return x;
+
+
+}
+struct node* leftRotate(struct node* y){
+    struct node* y= x->right;
+    struct node* terminal2 = y->left;
+    y->left = x;
+    x->right = terminal2;
+    y->height = max(getH(y->right),getH(y->left))+1;
+    x->height = max(getH(x->right),getH(x->left))+1;
+    return y;
+
+
+}
+
+struct node*insert(struct node* node, int key){
+    if (node =NULL){
+        return createNode(key);
+    }
+    if (key<node->key){
+        node->left = insert(node->left,key);
+    }
+    else if (key>node->key){
+        node->right = insert(node->right,key);
+    }
+    else{
+        return node;
+    }
+    
+}
